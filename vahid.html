@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Professors</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<script src="utils.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="main.css" />
+
+</head>
+<body>
+
+<div class="header">
+  <h1>Boston College Eagles Professors</h1>
+
+</div>
+
+<div class="navbar">
+  <a href="professor.html" class="active">Home</a>
+  <a href="profile.html">Profile</a>
+
+</div>
+
+<a id = down>
+  <div class="main">
+    <img src="vahid.jpg" alt="vahid" style="width:200px;height:200px;border:0;">
+     <a href="vahid.html#middle" class="button">Rate this Professor</a>
+
+    <h2>Vahid Montazerhodjat</h2>
+    <h5>Assistant Professor</h5>
+    <h5>St. Mary S252 <i>montazer@bc.edu</i></h5>
+    <h5>Relevant Coursework: <i>CS1, Logic, Randomness</i></h5>
+
+    <br>
+    <h3 style="display: inline">Rating:  </h3><h3 style="display: inline; color:red" id="raw"></h3><h3 style="display: inline">/5   </h3>
+    <br>
+    <h3 style="display: inline">Personal Rating:  </h3><h3 style="display: inline; color:red" id="per"></h3><h3 style="display: inline">/5  </h3>
+
+    <br>
+    <br>
+    <br>
+    <div style="width: 85%; margin:auto; height: 300px">
+    		<canvas id="canvas"></canvas>
+    	</div>
+</div>
+
+
+  <div class="main-left">
+
+  <form action="/action_page.php" id="usrform">
+  Rating:  <input id="newsco" type="text" name="GPA"> &nbsp <input type="button" onclick="rateprof()" value="Submit">
+  <p style="font-size:80%;">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Ex: 8.</p>
+  </form>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+<script type="text/javascript" src="index.js"></script>
+<script>
+var ctx = document.getElementById("canvas").getContext('2d');
+
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: generateLabel(),
+        datasets: [{
+            label: 'student ratings', // Name the series
+            data: generateData(), // Specify the data values array
+            fill: false,
+            borderColor: 'LavenderBlush', // Add custom color border (Line)
+            backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+            borderWidth: 0 // Specify bar border width
+        }]
+    },
+    options: {
+      responsive: true, // Instruct chart js to respond nicely.
+      maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height
+    }
+});
+</script>
+</body>
+</html>

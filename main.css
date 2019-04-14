@@ -1,0 +1,233 @@
+<style>
+* {
+  box-sizing: border-box;
+}
+
+{
+  margin: 0 auto 0 auto;
+}
+
+/* Style the body */
+body {
+  font-family: cursive;
+  text-align: center;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 10px;
+  margin-left: 300px;
+  margin-right: 300px;
+  text-align: left;
+  background: #763939;
+  color: white;
+  font-family:cursive;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  margin-left: 300px;
+  margin-right: 300px;
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  margin-left: 300px;
+  margin-right: 300px;
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: LavenderBlush	;
+  padding: 20px;
+
+}
+.main-left {
+  margin-left: 300px;
+  margin-right: 300px;
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  text-align: left;
+  background-color: LavenderBlush	;
+  padding: 20px;
+
+}
+
+/* Fake image, just for this example */
+.eagle {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+/* Footer */
+.footer {
+
+  margin-left: 300px;
+  margin-right: 300px;
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+.display-topleft
+{
+  position:absolute;
+  left:0;
+  top:0;
+  }
+.display-topright
+{
+  position:absolute;
+  right:0;
+  top:0;
+}
+.display-bottomleft
+{
+  position:absolute;
+  left:0;
+  bottom:0;
+}
+.display-bottomright
+{
+  position:absolute;
+  right:0;
+  bottom:0;
+}
+.button {
+  background-color: #763939; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 320px;
+  text-align: center;
+  text-decoration: none;
+  display:block;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.button:hover{
+  color:#fff!important;
+  background-color:grey;
+}
+.smallbutton {
+  background-color: #763939; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display:inline-block;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+table#t01 th {
+  background-color: LavenderBlush;
+  color: Black;
+}
+
+canvas {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+</style>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Professors</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="main.css" />
+
+</head>
+<body>
+
+<div class="header">
+  <h1>My Profile
+
+</h1>
+</div>
+
+<div class="navbar">
+  <a href="professor.html">Home</a>
+  <a href="profile.html" class = "active">Profile</a>
+</div>
+
+  <div class="main">
+  <h2> Enter your student information</h2>
+  </div>
+
+<div class="main-left">
+
+<form action="/action_page.php" id="usrform">
+GPA:  <input id="gpa" type="text" name="GPA">
+<p style="font-size:60%;">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Ex: 3.5.</p>
+
+<p> Major:
+<select id="major">
+  <option value="Mathematics">Mathematics</option>
+  <option value="Computer Science">Computer Science</option>
+  <option value="English">English</option>
+  <option value="History">History</option>
+</select>
+</p>
+<p></p>
+<p></p>
+Year (Enter 1-4 only!):  <input id="year" type="text" name="Year">
+<br>
+<p style="font-size:60%;">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Ex: 1-Freshman 2- Sophomore 3 - Junior 4- Senior
+.</p>
+Number of Prior Classes Taken:  <input id="numclass" type="text" name="Year">
+<br>
+<p style="font-size:60%;">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+  &nbsp &nbsp &nbsp  Ex: 4
+</p>
+
+<input type="button" onclick="updatecurrent()" value="Submit">
+</form>
+
+</div>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
